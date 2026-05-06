@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/map_fragment"
-        android:name="com.boolder.boolder.view.map.MapFragment"
+        android:name="com.boolder.boolderflo.view.map.MapFragment"
         android:label="Map fragment"
         tools:layout="@layout/fragment_map">
         <deepLink
@@ -43,13 +43,13 @@
 
     <fragment
         android:id="@+id/search_fragment"
-        android:name="com.boolder.boolder.view.search.SearchFragment"
+        android:name="com.boolder.boolderflo.view.search.SearchFragment"
         android:label="Search fragment"
         tools:layout="@layout/fragment_search" />
 
     <fragment
         android:id="@+id/area_overview_fragment"
-        android:name="com.boolder.boolder.view.areadetails.areaoverview.AreaOverviewFragment"
+        android:name="com.boolder.boolderflo.view.areadetails.areaoverview.AreaOverviewFragment"
         android:label="Area overview fragment">
         <argument
             android:name="area_id"
@@ -77,7 +77,7 @@
 
     <fragment
         android:id="@+id/area_problems_fragment"
-        android:name="com.boolder.boolder.view.areadetails.areaproblems.AreaProblemsFragment"
+        android:name="com.boolder.boolderflo.view.areadetails.areaproblems.AreaProblemsFragment"
         android:label="Area problems fragment">
         <argument
             android:name="area_id"
@@ -86,7 +86,7 @@
 
     <fragment
         android:id="@+id/area_circuit_fragment"
-        android:name="com.boolder.boolder.view.areadetails.areacircuit.AreaCircuitFragment"
+        android:name="com.boolder.boolderflo.view.areadetails.areacircuit.AreaCircuitFragment"
         android:label="Area circuit fragment">
         <argument
             android:name="circuit_id"
@@ -95,12 +95,12 @@
 
     <fragment
         android:id="@+id/offline_photos_fragment"
-        android:name="com.boolder.boolder.view.offlinephotos.OfflinePhotosFragment"
+        android:name="com.boolder.boolderflo.view.offlinephotos.OfflinePhotosFragment"
         android:label="Offline photos" />
 
     <fragment
         android:id="@+id/discover_fragment"
-        android:name="com.boolder.boolder.view.discover.discover.DiscoverFragment"
+        android:name="com.boolder.boolderflo.view.discover.discover.DiscoverFragment"
         android:label="Discover">
         <action
             android:id="@+id/navigate_to_area_overview_screen"
@@ -134,7 +134,7 @@
 
     <fragment
         android:id="@+id/levels_fragment"
-        android:name="com.boolder.boolder.view.discover.levels.LevelsFragment"
+        android:name="com.boolder.boolderflo.view.discover.levels.LevelsFragment"
         android:label="Levels">
         <action
             android:id="@+id/navigate_to_beginner_levels_screen"
@@ -154,7 +154,7 @@
 
     <fragment
         android:id="@+id/beginner_levels_fragment"
-        android:name="com.boolder.boolder.view.discover.levels.beginner.BeginnerLevelsFragment"
+        android:name="com.boolder.boolderflo.view.discover.levels.beginner.BeginnerLevelsFragment"
         android:label="Beginner levels">
         <action
             android:id="@+id/navigate_to_area_overview_screen"
@@ -167,7 +167,7 @@
 
     <fragment
         android:id="@+id/dries_fast_fragment"
-        android:name="com.boolder.boolder.view.discover.driesfast.DriesFastFragment"
+        android:name="com.boolder.boolderflo.view.discover.driesfast.DriesFastFragment"
         android:label="Dries fast">
         <action
             android:id="@+id/navigate_to_area_overview_screen"
@@ -180,7 +180,7 @@
 
     <fragment
         android:id="@+id/train_and_bike_fragment"
-        android:name="com.boolder.boolder.view.discover.trainandbike.TrainAndBikeFragment"
+        android:name="com.boolder.boolderflo.view.discover.trainandbike.TrainAndBikeFragment"
         android:label="Train and bike">
         <action
             android:id="@+id/navigate_to_area_overview_screen"
@@ -193,17 +193,17 @@
 
     <fragment
         android:id="@+id/tick_list_fragment"
-        android:name="com.boolder.boolder.view.ticklist.TickListFragment"
+        android:name="com.boolder.boolderflo.view.ticklist.TickListFragment"
         android:label="Tick list" />
 
     <fragment
         android:id="@+id/contribute_fragment"
-        android:name="com.boolder.boolder.view.contribute.ContributeFragment"
+        android:name="com.boolder.boolderflo.view.contribute.ContributeFragment"
         android:label="Contribute" />
 
     <dialog
         android:id="@+id/full_screen_photo_fragment"
-        android:name="com.boolder.boolder.view.fullscreenphoto.FullScreenPhotoFragment"
+        android:name="com.boolder.boolderflo.view.fullscreenphoto.FullScreenPhotoFragment"
         android:label="Full screen photo">
         <argument
             android:name="problem_id"
@@ -215,25 +215,25 @@
 
     <dialog
         android:id="@+id/dialog_circuit_filter"
-        android:name="com.boolder.boolder.view.map.filter.circuit.CircuitFilterBottomSheetDialogFragment"
+        android:name="com.boolder.boolderflo.view.map.filter.circuit.CircuitFilterBottomSheetDialogFragment"
         android:label="Circuit filter">
         <argument
             android:name="available_circuits"
-            app:argType="com.boolder.boolder.domain.model.Circuit[]" />
+            app:argType="com.boolder.boolderflo.domain.model.Circuit[]" />
     </dialog>
 
     <dialog
         android:id="@+id/dialog_grades_filter"
-        android:name="com.boolder.boolder.view.map.filter.grade.GradesFilterBottomSheetDialogFragment"
+        android:name="com.boolder.boolderflo.view.map.filter.grade.GradesFilterBottomSheetDialogFragment"
         android:label="Grades filter">
         <argument
             android:name="grade_range"
-            app:argType="com.boolder.boolder.domain.model.GradeRange" />
+            app:argType="com.boolder.boolderflo.domain.model.GradeRange" />
     </dialog>
 
     <dialog
         android:id="@+id/dialog_poi"
-        android:name="com.boolder.boolder.view.map.poi.PoiBottomSheetDialogFragment"
+        android:name="com.boolder.boolderflo.view.map.poi.PoiBottomSheetDialogFragment"
         android:label="POI bottom sheet">
         <argument
             android:name="poi_name"

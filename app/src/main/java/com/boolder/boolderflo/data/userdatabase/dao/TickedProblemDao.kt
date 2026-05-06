@@ -1,0 +1,29 @@
+package com.boolder.boolderflo.data.userdatabase.dao
+
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.boolder.boolderflo.data.userdatabase.entity.TickedProblemEntity
+
+@Dao
+interface TickedProblemDao {
+
+    @Query("SELECT * FROM ticked_problems")
+    suspend fun getAllTickedProblems(): List<TickedProblemEntity>
+
+    @Query("SELECT problem_id FROM ticked_problems WHERE tick_status = :tickStatus")
+    suspend fun getSavedProblemIds(tickStatus: String): List<Int>
+
+    @Query("SELECT * FROM ticked_problems WHERE problem_id = :problemId")
+    suspend fun getTickedProblemByProblemId(problemId: Int): TickedProblemEntity?
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertTickedProblem(tickedProblem: TickedProblemEntity)
+
+    @Query("DELETE FROM ticked_problems WHERE problem_id = :problemId")
+    suspend fun deleteTickedProblemByProblemId(problemId: Int)
+
+    @Query("DELETE FROM ticked_problems")
+    suspend fun deleteAll()
+}

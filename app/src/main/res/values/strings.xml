@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Boolder</string>
+    <string name="app_name" translatable="false">BoulderFlo</string>
 
     <string name="tab_map">Map</string>
     <string name="tab_discover">Discover</string>
@@ -88,6 +88,7 @@
     <string name="filter_popular">Popular</string>
     <string name="filter_projects">Projects</string>
     <string name="filter_ticked">Ticked</string>
+    <string name="filter_f">Sit 6a</string>
     <string name="filter_warning_no_projects_message">Add your first project to use this filter.</string>
     <string name="filter_warning_no_projects_title">You don\'t have any projects yet</string>
     <string name="filter_warning_no_ticks_message">Tick your first problem to use this filter.</string>

@@ -1,0 +1,562 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 28,
+    "identityHash": "7a21bb04a68e15fc79ea11b1aa0eae1c",
+    "entities": [
+      {
+        "tableName": "areas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT NOT NULL, `name_searchable` TEXT NOT NULL, `priority` INTEGER NOT NULL, `description_fr` TEXT, `description_en` TEXT, `warning_fr` TEXT, `warning_en` TEXT, `tags` TEXT, `south_west_lat` REAL NOT NULL, `south_west_lon` REAL NOT NULL, `north_east_lat` REAL NOT NULL, `north_east_lon` REAL NOT NULL, `level1_count` INTEGER NOT NULL, `level2_count` INTEGER NOT NULL, `level3_count` INTEGER NOT NULL, `level4_count` INTEGER NOT NULL, `level5_count` INTEGER NOT NULL, `level6_count` INTEGER NOT NULL, `level7_count` INTEGER NOT NULL, `level8_count` INTEGER NOT NULL, `problems_count` INTEGER NOT NULL, `cluster_id` INTEGER, `download_size` REAL NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nameSearchable",
+            "columnName": "name_searchable",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "priority",
+            "columnName": "priority",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descriptionFr",
+            "columnName": "description_fr",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "descriptionEn",
+            "columnName": "description_en",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "warningFr",
+            "columnName": "warning_fr",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "warningEn",
+            "columnName": "warning_en",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "tags",
+            "columnName": "tags",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "southWestLat",
+            "columnName": "south_west_lat",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "southWestLon",
+            "columnName": "south_west_lon",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "northEastLat",
+            "columnName": "north_east_lat",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "northEastLon",
+            "columnName": "north_east_lon",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level1Count",
+            "columnName": "level1_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level2Count",
+            "columnName": "level2_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level3Count",
+            "columnName": "level3_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level4Count",
+            "columnName": "level4_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level5Count",
+            "columnName": "level5_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level6Count",
+            "columnName": "level6_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level7Count",
+            "columnName": "level7_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "level8Count",
+            "columnName": "level8_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "problemsCount",
+            "columnName": "problems_count",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "clusterId",
+            "columnName": "cluster_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "downloadSize",
+            "columnName": "download_size",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "area_idx",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "orders": [
+              "ASC"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `area_idx` ON `${TABLE_NAME}` (`id` ASC)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "circuits",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `color` TEXT NOT NULL, `average_grade` TEXT NOT NULL, `beginner_friendly` INTEGER NOT NULL, `dangerous` INTEGER NOT NULL, `south_west_lat` REAL NOT NULL, `south_west_lon` REAL NOT NULL, `north_east_lat` REAL NOT NULL, `north_east_lon` REAL NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "color",
+            "columnName": "color",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "averageGrade",
+            "columnName": "average_grade",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "beginnerFriendly",
+            "columnName": "beginner_friendly",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "dangerous",
+            "columnName": "dangerous",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "southWestLat",
+            "columnName": "south_west_lat",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "southWestLng",
+            "columnName": "south_west_lon",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "northEastLat",
+            "columnName": "north_east_lat",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "northEastLng",
+            "columnName": "north_east_lon",
+            "affinity": "REAL",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "lines",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `problem_id` INTEGER NOT NULL, `topo_id` INTEGER NOT NULL, `coordinates` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "problemId",
+            "columnName": "problem_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "topoId",
+            "columnName": "topo_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "coordinates",
+            "columnName": "coordinates",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "line_idx",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "orders": [
+              "ASC"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `line_idx` ON `${TABLE_NAME}` (`id` ASC)"
+          },
+          {
+            "name": "line_topo_idx",
+            "unique": false,
+            "columnNames": [
+              "topo_id"
+            ],
+            "orders": [
+              "ASC"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `line_topo_idx` ON `${TABLE_NAME}` (`topo_id` ASC)"
+          },
+          {
+            "name": "line_problem_idx",
+            "unique": false,
+            "columnNames": [
+              "problem_id"
+            ],
+            "orders": [
+              "ASC"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `line_problem_idx` ON `${TABLE_NAME}` (`problem_id` ASC)"
+          }
+        ],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "pois",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `poi_type` TEXT NOT NULL, `name` TEXT NOT NULL, `short_name` TEXT NOT NULL, `google_url` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "poiType",
+            "columnName": "poi_type",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "shortName",
+            "columnName": "short_name",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "googleMapsUrl",
+            "columnName": "google_url",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "poi_routes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `area_id` INTEGER NOT NULL, `poi_id` INTEGER NOT NULL, `distance_in_minutes` INTEGER NOT NULL, `transport` TEXT NOT NULL, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "areaId",
+            "columnName": "area_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "poiId",
+            "columnName": "poi_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "distanceInMinutes",
+            "columnName": "distance_in_minutes",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "transport",
+            "columnName": "transport",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "problems",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `name` TEXT, `name_en` TEXT, `name_searchable` TEXT, `grade` TEXT, `latitude` REAL NOT NULL, `longitude` REAL NOT NULL, `circuit_id` INTEGER, `circuit_number` TEXT, `circuit_color` TEXT, `steepness` TEXT NOT NULL, `sit_start` INTEGER NOT NULL, `area_id` INTEGER NOT NULL, `bleau_info_id` TEXT, `featured` INTEGER NOT NULL, `popularity` INTEGER, `parent_id` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nameEn",
+            "columnName": "name_en",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "nameSearchable",
+            "columnName": "name_searchable",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "grade",
+            "columnName": "grade",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "latitude",
+            "columnName": "latitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "longitude",
+            "columnName": "longitude",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "circuitId",
+            "columnName": "circuit_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "circuitNumber",
+            "columnName": "circuit_number",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "circuitColor",
+            "columnName": "circuit_color",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "steepness",
+            "columnName": "steepness",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "sitStart",
+            "columnName": "sit_start",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "areaId",
+            "columnName": "area_id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "bleauInfoId",
+            "columnName": "bleau_info_id",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "featured",
+            "columnName": "featured",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "popularity",
+            "columnName": "popularity",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "parentId",
+            "columnName": "parent_id",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "problem_area_idx",
+            "unique": false,
+            "columnNames": [
+              "area_id"
+            ],
+            "orders": [
+              "ASC"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `problem_area_idx` ON `${TABLE_NAME}` (`area_id` ASC)"
+          },
+          {
+            "name": "problem_circuit_idx",
+            "unique": false,
+            "columnNames": [
+              "circuit_id"
+            ],
+            "orders": [
+              "ASC"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `problem_circuit_idx` ON `${TABLE_NAME}` (`circuit_id` ASC)"
+          },
+          {
+            "name": "problem_idx",
+            "unique": false,
+            "columnNames": [
+              "id"
+            ],
+            "orders": [
+              "ASC"
+            ],
+            "createSql": "CREATE INDEX IF NOT EXISTS `problem_idx` ON `${TABLE_NAME}` (`id` ASC)"
+          }
+        ],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7a21bb04a68e15fc79ea11b1aa0eae1c')"
+    ]
+  }
+}

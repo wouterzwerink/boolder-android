@@ -85,6 +85,7 @@
     <string name="filter_popular">Populaires</string>
     <string name="filter_projects">Projets</string>
     <string name="filter_ticked">Réussies</string>
+    <string name="filter_f">Assis 6a</string>
     <string name="filter_warning_no_projects_message">Enregistrez votre premier projet pour utiliser ce filtre.</string>
     <string name="filter_warning_no_projects_title">Vous n\'avez pas encore de projet</string>
     <string name="filter_warning_no_ticks_message">Enregistrez votre première voie réussie pour utiliser ce filtre.</string>

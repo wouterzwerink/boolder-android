@@ -12,11 +12,11 @@ plugins {
 }
 
 android {
-    namespace = "com.boolder.boolder"
+    namespace = "com.boolder.boolderflo"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.boolder.boolder"
+        applicationId = "com.boolder.boolderflo"
         minSdk = 21
         targetSdk = 35
         versionCode = 43 // bump when new version

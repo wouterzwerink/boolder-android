@@ -12,8 +12,8 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.boolder.boolder.R
-import com.boolder.boolder.view.main.MainActivity
+import com.boolder.boolderflo.R
+import com.boolder.boolderflo.view.main.MainActivity
 import kotlinx.coroutines.test.runTest
 import org.junit.Rule
 import org.junit.Test
