@@ -53,6 +53,7 @@
     <string name="stepness_overhang">Dévers</string>
     <string name="stepness_roof">Toit</string>
     <string name="stepness_traverse">Traversée</string>
+    <string name="stepness_other">Autre</string>
     <string name="steepness">Inclinaison</string>
     <string name="filter_steepness_count">Inclinaison (%d)</string>
 

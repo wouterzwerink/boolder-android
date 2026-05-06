@@ -56,6 +56,7 @@
     <string name="stepness_overhang">Overhang</string>
     <string name="stepness_roof">Roof</string>
     <string name="stepness_traverse">Traverse</string>
+    <string name="stepness_other">Other</string>
     <string name="steepness">Steepness</string>
     <string name="filter_steepness_count">Steepness (%d)</string>
 
